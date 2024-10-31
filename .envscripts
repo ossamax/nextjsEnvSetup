@@ -1,0 +1,10 @@
+    "dev": "env-cmd -f .env.dev next dev --port 5000",
+    "build:dev": "env-cmd -f .env.dev next build",
+    "build:test": "env-cmd -f .env.test next build",
+    "build:prod": "env-cmd -f .env.prod next build",
+    "start:dev": "env-cmd -f .env.dev next start --port 5000",
+    "start:test": "env-cmd -f .env.test next start --port 5000",
+    "start:prod": "env-cmd -f .env.prod next start --port 3000",
+    "test": "rimraf .next && npm run build:test && npm run start:test",
+    "prod": "rimraf .next && npm run build:prod && npm run start:prod",
+    "lint": "next lint"
