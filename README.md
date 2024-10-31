@@ -21,7 +21,8 @@ Modify the scripts in package.json to specify the correct environment file for e
 
 json
 Copy code
-"scripts": {
+
+```"scripts": {
   "dev": "env-cmd -f .env.dev next dev --port 5000",
   "build:dev": "env-cmd -f .env.dev next build",
   "build:test": "env-cmd -f .env.test next build",
@@ -33,6 +34,7 @@ Copy code
   "prod": "rimraf .next && npm run build:prod && npm run start:prod",
   "lint": "next lint"
 }
+```
 .gitignore Configuration
 To prevent environment files from being pushed to GitHub, add them to your .gitignore file:
 
