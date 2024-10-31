@@ -7,22 +7,27 @@ Steps to Set Up Environments
 Rename Environment Files
 Rename your environment files to custom names so Next.js does not pick them up automatically. Use the following names:
 
+```
 .env.development → .env.dev
 .env.test → .env.test
 .env.production → .env.prod
 Install env-cmd
+```
 To use these custom environment files during builds, install env-cmd:
 
 bash
 Copy code
+```
 npm install env-cmd
+```
 Update package.json Scripts
 Modify the scripts in package.json to specify the correct environment file for each environment:
 
 json
 Copy code
 
-```"scripts": {
+```
+"scripts": {
   "dev": "env-cmd -f .env.dev next dev --port 5000",
   "build:dev": "env-cmd -f .env.dev next build",
   "build:test": "env-cmd -f .env.test next build",
